@@ -13,7 +13,19 @@ Webpack barcha kirish (entry) nuqtalarini belgilab, barcha bog'langan fayllarni 
 ### 1. Entry (Kirish nuqtasi)
 Entry nuqtasi - bu Webpack'ning yig'ishni boshlaydigan fayli. Odatda, bu ilovaning bosh fayli hisoblanadi.
 
-```javascript
-module.exports = {
-  entry: './src/index.js',
-};
+    module.exports = {
+      entry: './src/index.js',
+    };
+
+### 2. Output (Chiqish)
+Output - bu Webpack tomonidan yaratilgan to'plamning qayerga yozilishini belgilaydi. Odatda dist katalogiga yoziladi.
+
+    module.exports = {
+      entry: './src/index.js',
+      output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+      },
+    };
+
+    
