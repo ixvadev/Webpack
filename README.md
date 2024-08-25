@@ -40,6 +40,53 @@ Loaders Webpack'ga JavaScript bo'lmagan fayllarni (masalan, CSS, tasvirlar) ishl
         ],
       },
     };
+### 4. Plugins (Plaginlar)
+Plaginlar Webpack'ning imkoniyatlarini kengaytiradi va yig'ish jarayonining turli bosqichlarida qo'shimcha vazifalarni bajaradi. Masalan, fayllarni minifikatsiya qilish yoki o'zgarishlarni avtomatik aniqlash (HMR).
 
+    const HtmlWebpackPlugin = require('html-webpack-plugin');
+    module.exports = {
+      plugins: [
+        new HtmlWebpackPlugin({
+          template: './src/index.html',
+        }),
+      ],
+    };
 
+### 5. Mode (Rejim)
+Webpack ikkita asosiy rejimga ega: development va production. Har bir rejim ma'lum konfiguratsiyalarga ega, masalan, production rejimi optimallashtirishni o'z ichiga oladi.
     
+    module.exports = {
+      mode: 'development',
+    };
+
+### Webpack konfiguratsiyasi
+Webpack odatda webpack.config.js fayli orqali konfiguratsiya qilinadi. Bu fayl Webpack'ga qanday kirish nuqtalarini ishlatish, qanday yuklovchilar va plaginlar qo'llash kerakligini aytadi.
+
+    const path = require('path');
+    const HtmlWebpackPlugin = require('html-webpack-plugin');
+    
+    module.exports = {
+      mode: 'development',
+      entry: './src/index.js',
+      output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+      },
+      module: {
+        rules: [
+          {
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader'],
+          },
+        ],
+      },
+      plugins: [
+        new HtmlWebpackPlugin({
+          template: './src/index.html',
+        }),
+      ],
+    };
+
+
+
+
