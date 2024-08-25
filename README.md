@@ -27,5 +27,19 @@ Output - bu Webpack tomonidan yaratilgan to'plamning qayerga yozilishini belgila
         path: path.resolve(__dirname, 'dist'),
       },
     };
+### 3. Loaders (Yuklovchilar)
+Loaders Webpack'ga JavaScript bo'lmagan fayllarni (masalan, CSS, tasvirlar) ishlash imkonini beradi. Ular fayllarni o'zgartirib, ularni Webpack'ning modul tizimiga kiritadi.
+
+    module.exports = {
+      module: {
+        rules: [
+          {
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader'],
+          },
+        ],
+      },
+    };
+
 
     
