@@ -1,3 +1,5 @@
+<img class="logo" src="https://webpack.js.org/site-logo.c0e60df418e04f58.svg" alt="webpack logo" width="300" height="200">
+
 # Webpack haqida to'liq ma'lumot
 
 ## Webpack nima?
