@@ -40,6 +40,8 @@ Loaders Webpack'ga JavaScript bo'lmagan fayllarni (masalan, CSS, tasvirlar) ishl
         ],
       },
     };
+
+
 ### 4. Plugins (Plaginlar)
 Plaginlar Webpack'ning imkoniyatlarini kengaytiradi va yig'ish jarayonining turli bosqichlarida qo'shimcha vazifalarni bajaradi. Masalan, fayllarni minifikatsiya qilish yoki o'zgarishlarni avtomatik aniqlash (HMR).
 
